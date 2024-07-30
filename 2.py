@@ -1,3 +1,5 @@
+# This program utilises web automation to transfer all inspection data for all completed jobs onto a Sydney Water Site to be reviewed
+
 from datetime import datetime
 import os
 import shutil
@@ -98,7 +100,7 @@ def login():
             EC.presence_of_element_located((By.ID, "userNameInput"))
         )
         print("Username field found.")
-        username_field.send_keys("w5c@sydneywater.com.au")
+        username_field.send_keys("***@sydneywater.com.au")
         print("Username entered.")
         
         print("Waiting for the password field...")
@@ -107,7 +109,7 @@ def login():
             EC.presence_of_element_located((By.ID, "passwordInput"))
         )
         print("Password field found.")
-        password_field.send_keys("Pmacci14")
+        password_field.send_keys("******")
         print("Password entered.")
         
         driver.implicitly_wait(10)
