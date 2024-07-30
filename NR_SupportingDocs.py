@@ -1,3 +1,5 @@
+# This program transfers and appropriately names all supporting documents for all jobs completed under the NR contract, to be submitted for monthly claim.
+
 import pandas as pd
 import os
 import shutil
