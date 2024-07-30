@@ -1,3 +1,5 @@
+# This program compiles all data from all inspections for every project into one excel spreadsheet, which is to undergo QA before another program transfers this data to Sydney Water
+
 import pandas as pd
 import os
 import sys
@@ -11,11 +13,9 @@ from openpyxl.utils import get_column_letter
 base_dir = r"F:\NR CCI UPLOADS\PENDING"
 output_file_path = os.path.join(base_dir, "compiled_data.xlsx")
 
-# Suppress specific warnings
 warnings.filterwarnings("ignore", category=FutureWarning, message="The behavior of DataFrame concatenation with empty or all-NA entries is deprecated.")
 warnings.filterwarnings("ignore", category=UserWarning, message="Parsing dates in %d/%m/%Y %H:%M:%S format when dayfirst=False")
 
-# Custom column headers
 column_headers = [
     "Attempt #", "Inspection Video(s)", "US MH", "DS MH", "Inspection Direction", "Date of inspection",
     "Time of inspection", "PackageName", "Cleaning", "Inspected Length [m]", "Pipe Asset ID", "JSA/WO",
