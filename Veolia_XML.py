@@ -1,3 +1,4 @@
+# This program transfers all inspection data under the Veolia contract (extracted from WinCan VX) into an XML format, which is then transferred to Sydney Water for review
 import pandas as pd
 import xml.etree.ElementTree as ET
 import os
